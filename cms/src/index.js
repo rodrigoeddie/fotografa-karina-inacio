@@ -1,12 +1,13 @@
-import * as restify from 'restify'
+import {Server} from './server/server'
+import {usersRouter} from './users/users.router'
 
-const server = restify.createServer();
+const server = new Server();
 
-server.get('/', (res, resp, next) => {
-    resp.json({message: 'hello'});
-    return next();
-});
+server.bootstrap([usersRouter]).then(server => {
+  console.log('Server is listening on:', server.application.address())
+}).catch(error => {
+  console.log('Server failed to start');
+  console.error(error);
 
-server.listen(3000, () => {
-    console.log(`API ins running...`);
-});
+  process.exit(1);
+})
