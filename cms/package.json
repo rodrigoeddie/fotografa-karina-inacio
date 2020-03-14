@@ -1,22 +1,21 @@
 {
-  "name": "cms",
+  "name": "karina-inacio-fotografia",
   "version": "1.0.0",
-  "description": "",
+  "description": "CMS para gerenciamento do site",
   "main": "index.js",
+  "repository": "https://github.com/rodrigoeddie/fotografa-karina-inacio.git",
+  "author": "Rodrigo de Melo",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "babel src -d build --source-maps --watch"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/preset-env": "^7.8.6",
-    "restify": "^8.5.1"
+    "mongoose": "^5.9.4",
+    "restify": "^8.5.1",
+    "restify-cors-middleware": "^1.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/node": "^7.8.4"
+    "nodemon": "^2.0.2"
   }
 }
