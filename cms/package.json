@@ -11,9 +11,16 @@
     "start": "node src/index.js"
   },
   "dependencies": {
+    "boom": "^7.2.0",
+    "filter-files": "^0.4.0",
+    "is-directory": "^0.3.1",
+    "lodash": "^4.17.10",
     "mongoose": "^5.9.4",
+    "mongoose-timestamp": "^0.6.0",
     "restify": "^8.5.1",
-    "restify-cors-middleware": "^1.1.1"
+    "restify-cors-middleware": "^1.1.1",
+    "restify-errors": "^8.0.2",
+    "table": "^4.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

@@ -1,8 +1,7 @@
-const path        = require('path')
+const path = require('path')
 const filterFiles = require('filter-files')
-const isDir       = require('is-directory')
+const isDir = require('is-directory')
 const { flatten } = require('lodash')
-
 const isRouteFile = fileName => /((routes)|(route))\.js$/.test(fileName)
 
 /**
