@@ -8,9 +8,9 @@ const registerRoute    = require('./register-route')
  * @param  {String}             dirName
  */
 const registerRoutesByPath = (server, dirName) => {
-  const routes = loadRoutesByPath(dirName)
+  const routes = loadRoutesByPath(dirName);
 
-  routes.forEach(route => registerRoute(server, route))
+  routes.forEach(route => registerRoute(server, route));
 
   displayRoutes(routes)
 }

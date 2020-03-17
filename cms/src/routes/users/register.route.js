@@ -3,7 +3,7 @@ const User   = require('../../models/User');
 
 module.exports = {
     method: 'post',
-    path: 'user/register/',
+    path: '/user/register',
     name: 'user register',
     useWrap: true,
     version: 'v1.0.0',

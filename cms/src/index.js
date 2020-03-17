@@ -1,6 +1,8 @@
 const server = require('./server');
 const models = require('./models');
 const config = require('./config');
+const routes = require('./helpers/register-routes-by-path');
+const path   = require('path');
 
 server.listen(config.PORT, () => {
     models.connect(config.MONGODB_URI, {
@@ -15,5 +17,6 @@ database.on('error', (err) => {
 });
 
 database.once('open', () => {
-    // require('./routes/users')(server)
+    console.log(`Server running on Port: ${config.PORT}`);
+    routes(server, path.join(__dirname, './routes'))
 });

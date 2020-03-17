@@ -37,9 +37,9 @@ const getHandlers = route => {
  * @param  {Object}         route  route object
  */
 const registerRoute = (server, route) => {
-  const { method } = route
-  const opts = pick(route, ['path', 'name', 'version'])
-  const handlers = getHandlers(route)
+  const { method } = route;
+  const opts       = pick(route, ['path', 'name', 'version']);
+  const handlers   = getHandlers(route);
 
   server[method](opts, handlers)
 }

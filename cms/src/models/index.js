@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const rjwt     = require('restify-jwt-community');
 const server   = require('../server');
+const config   = require('../config');
 
-const openPaths = ['/auth', '/debtors/','/debtors:id'];
+const openPaths = ['/auth', '/auth/register'];
 
 server.use(rjwt({ secret: config.JWT_SECRET })
       .unless({ path: openPaths }));
