@@ -1,3 +1,4 @@
+const errors = require('restify-errors');
 const bcrypt = require('bcryptjs');
 const User   = require('../../models/User');
 
@@ -9,7 +10,9 @@ module.exports = {
     version: 'v1.0.0',
     handler: (req, res) => {
         const { email, password } = req.body;
-
+        
+        console.log(email);
+        console.log(password);
         const user = new User({
             email,
             password
@@ -23,11 +26,9 @@ module.exports = {
                 //Save User to database
                 try {
                     const newUser = await user.save();
-                    res.send(201)
-                    next()
-                    
+                    return res.send(201)
                 } catch (err) {
-                    return next(new errors.InternalError(err.message))
+                    return new errors.InternalError(err.message);
                 }
             });
         })
