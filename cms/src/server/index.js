@@ -1,15 +1,15 @@
 const restify = require('restify');
+const path    = require('path');
+
+const cors   = require('./cors');
+const routes = require('../helpers/register-routes-by-path');
 
 const server = restify.createServer();
-const cors   = require('./cors');
-const path   = require('path');
-
-const registerRoutesByPath = require('../helpers/register-routes-by-path')
 
 server.pre(cors.preflight);
 server.use(cors.actual);
 server.use(restify.plugins.bodyParser());
 
-registerRoutesByPath(server, path.join(__dirname, '../routes'))
+routes(server, path.join(__dirname, '../routes'))
 
 module.exports = server;
