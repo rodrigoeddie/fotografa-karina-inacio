@@ -1,0 +1,22 @@
+node_modules
+.tmp
+.vscode
+package-lock.json
+yarn.lock
+build
+
+_AUX/*
+!.gitkeep
+
+**/*.map
+
+yarn-error.log
+
+# OSX Files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows image file caches
+Thumbs.db
