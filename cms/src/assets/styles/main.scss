@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+// adminLTE
+
 @import '_variables';
 @import '_mixins';
 @import '_objects';
@@ -9,6 +11,8 @@
 @import 'vendor/_normalize';
 @import 'vendor/_slick';
 
+@import 'vendor/fontawesome/scss/fontawesome';
+@import 'vendor/adminLTE/AdminLTE';
 
 // @import '../../.tmp/jpg-sprite.css';
 // @import '../../.tmp/png-sprite.css';

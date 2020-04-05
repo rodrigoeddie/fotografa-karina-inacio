@@ -72,7 +72,7 @@
         }
     </style>
 </head>
-<body id="{{ pageId }}">
+<body id="{{ pageId }}" class="hold-transition sidebar-mini layout-fixed">
     <div class="svg-icon-lib">
         {% include ".tmp/sprite.svg" ignore missing %}
     </div>
@@ -84,20 +84,26 @@
     </div>
 
     <a href="#goToContent" tabindex="1">Ir para o conteúdo</a>
+    
+    <div class="wrapper">
+        {% block header %}
+            {% component "header", tag="header" %}
+            {% component "sidebar" %}
+        {% endblock %}
 
-    {% block header %}
-        {% component "header", tag="header" %}
-    {% endblock %}
+        {% block content %}
+        <main></main>
+        {% endblock %}
 
-    {% block content %}
-    <main></main>
-    {% endblock %}
+        {% block footer %}
+            {% component "footer", tag="footer" %}
+        {% endblock %}
 
-    {% block footer %}
-        {% component "footer", tag="footer" %}
-    {% endblock %}
+        <aside class="control-sidebar control-sidebar-dark"></aside>
+    </div>
 
     <noscript id="deferred-styles">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ base }}assets/styles/main.min.css?{{ cacheId }}"/>
     </noscript>
 

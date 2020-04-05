@@ -17,7 +17,7 @@
             return false;
         }
 
-        if (!Is.mobile.ANY() && !Is.desktop.MAC() && !$body.is('.modal-opened') && !$body.is('.pause-scroll')) {
+        if (!Is.mobile.ANY() && !Is.desktop.MAC() && !$('[data-component]').is('[data-component="sidebar"]') && !$body.is('.modal-opened') && !$body.is('.pause-scroll')) {
             event.preventDefault();
 
             const maxScroll = $document.height() - $window.height();
