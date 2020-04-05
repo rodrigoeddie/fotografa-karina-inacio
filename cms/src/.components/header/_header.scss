@@ -2,13 +2,12 @@
     background: #177588;
 
     .container {
-        max-width: @sm - 30px;
         margin: 0 auto;
     }
 
     .logo {
         display: inline-block;
-        height: 60rem;
+        height: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -25,11 +24,24 @@
         .container {
             display: flex;
             align-items: center;
-            height: 50rem;
+            height: 3rem;
 
             a {
-                margin-right: 20rem;
-                font-size: 20rem;
+                margin-right: 1rem;
+                font-size: 1rem;
+
+                i {
+                    height: 23px;
+                    width: 23px;
+                    transition: transform .3s ease-out;
+                    display: inline-block;
+                
+                    svg {
+                        fill: #fff;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
             }
 
             .active {
@@ -46,9 +58,9 @@
             justify-content: space-between;
             text-transform: uppercase;
             color: #fff;
-            font-size: 38rem;
+            font-size: 2rem;
             letter-spacing: .03rem;
-            font-family: 'Bahnschrift';
+            // font-family: 'Bahnschrift';
         }
     }
 }

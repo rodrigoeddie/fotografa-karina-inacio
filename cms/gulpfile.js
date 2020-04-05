@@ -19,6 +19,8 @@ const reload             = browserSync.reload;
 const fs                 = require('fs');
 const path               = require('path');
 
+$.sass.compiler          = require('node-sass');
+
 const dir = {
     src: 'src',
     dest: 'build',
@@ -84,8 +86,8 @@ const paths = {
             ],
         },
         styles: [
-            `${dir.src}/assets/styles/main.less`,
-            `${dir.src}/${dir.components}/**/*.less`,
+            `${dir.src}/assets/styles/main.scss`,
+            `${dir.src}/${dir.components}/**/*.scss`,
         ],
         html: [
             `${dir.src}/${dir.pages}/**/*.html`,
@@ -118,7 +120,7 @@ const paths = {
         images: `${dir.src}/assets/images/**/*`,
         styles: [
             `${dir.src}/assets/styles/**/*`,
-            `${dir.src}/${dir.components}/**/*.{css,less}`,
+            `${dir.src}/${dir.components}/**/*.{css,scss}`,
         ],
         html: [
             `${dir.src}/${dir.pages}/**/*.html`,
@@ -233,7 +235,7 @@ const buildStyles = function buildStyles() {
         .pipe($.luegoComponentStyles())
         .pipe($.if(!isProduction, $.sourcemaps.init()))
         .pipe($.concat('main.min.css'))
-        .pipe($.less({ paths: [path.dirname(paths.src.styles[0])] }))
+        .pipe($.sass({includePaths: [path.dirname(paths.src.styles[0])] }).on('error', $.sass.logError))
         .pipe($.postcss([rucksack, autoprefixer, cssnano({ safe: true })]))
         .pipe($.if(!isProduction, $.sourcemaps.write('.')))
         .pipe($.plumber.stop())
