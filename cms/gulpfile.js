@@ -41,7 +41,6 @@ const paths = {
 
             `${dir.src}/assets/scripts/vendor/jquery/jquery-3.4.1.js`,
             `${dir.src}/assets/scripts/vendor/jquery/jquery.waitforimages.js`,
-            // `${dir.src}/assets/scripts/vendor/jquery/slick.min.js`,
 
             `${dir.src}/assets/scripts/vendor/greensock-js/TweenLite.js`,
             `${dir.src}/assets/scripts/vendor/greensock-js/easing/EasePack.js`,
@@ -57,15 +56,6 @@ const paths = {
             `${dir.src}/assets/scripts/vendor/luego/Animator.main.js`,
             `${dir.src}/assets/scripts/vendor/luego/Animator.effects.js`,
             `${dir.src}/assets/scripts/vendor/luego/Navigation.babel.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/Share.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/SpriteSheet.babel.js`,
-
-            // `${dir.src}/assets/scripts/vendor/luego/Player/EventHandler.babel.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/Player/InterfacePlayer.babel.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/Player/Player.babel.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/Player/drivers/FacebookDriver.babel.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/Player/drivers/VimeoDriver.babel.js`,
-            // `${dir.src}/assets/scripts/vendor/luego/Player/drivers/YoutubeDriver.babel.js`,
 
             `${dir.src}/assets/scripts/component.babel.js`,
             `${dir.src}/${dir.components}/**/*.js`,
@@ -74,8 +64,9 @@ const paths = {
             `${dir.src}/assets/scripts/smooth-scroll.babel.js`,
             `${dir.src}/assets/scripts/device.babel.js`,
             `${dir.src}/assets/scripts/main.babel.js`,
-            `${dir.src}/assets/scripts/tracking.babel.js`,
-            // `${dir.src}/assets/scripts/player.babel.js`,
+            
+            `${dir.src}/assets/scripts/vendor/plugins/bootstrap/js/bootstrap.bundle.babel.js`,
+            `${dir.src}/assets/scripts/vendor/adminLTE/AdminLTE.babel.js`,
         ],
         images: {
             sprites: `${dir.src}/assets/images/sprites/*`,
