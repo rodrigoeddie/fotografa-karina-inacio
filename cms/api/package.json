@@ -1,3 +1,6 @@
+// 20200421142119
+// https://raw.githubusercontent.com/rodrigoeddie/fotografa-karina-inacio/master/cms/package.json
+
 {
   "name": "karina-inacio-fotografia",
   "version": "1.0.0",
@@ -7,11 +10,7 @@
   "author": "Rodrigo de Melo",
   "license": "MIT",
   "scripts": {
-    "dev": "gulp serve:build",
-    "rest": "nodemon api/index.js",
-    "start": "node src/index.js",
-    "hom": "gulp build --env=hom && git hadouken 'Publicando no Luego Labs'",
-    "prod": "gulp build --env=prod"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

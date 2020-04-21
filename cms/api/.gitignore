@@ -4,6 +4,7 @@ node_modules
 package-lock.json
 yarn.lock
 build
+.DS_Store
 
 _AUX/*
 !.gitkeep
@@ -20,3 +21,17 @@ yarn-error.log
 
 # Windows image file caches
 Thumbs.db
+
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+tests/**/coverage/
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
