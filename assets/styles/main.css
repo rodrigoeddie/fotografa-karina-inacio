@@ -1,0 +1,333 @@
+@import url('_reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
+
+div.interface {
+    background-color: white;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.top {
+    position: relative;
+    border-bottom: 1px #000000 solid;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.wrap-logo {
+    transform: translateX(-50%);
+    padding: 31px 33px 0 33px;
+    text-indent: -9999px;
+    background: white;
+    position: absolute;
+    left: 50%;
+
+}
+
+.wrap-logo .logo {
+    background: url(../images/logo.png) no-repeat;
+    background-size: cover;
+    display: block;
+    height: 137px;
+    width: 274px;
+}
+
+.menu-right,
+.menu-left {
+    justify-content: space-between;
+    display: flex;
+    width: 30%;
+}
+
+.menu-right li a,
+.menu-left li a {
+    line-height: 80px;
+}
+
+.bottom {
+    position: relative;
+    height: 90px;
+}
+
+.bottom-menu {
+    position: absolute;
+    right: 0px;
+    top: 15%;
+}
+
+.icon-header {
+    padding-left: 20px;
+    height: 30px;
+    width: 30px;
+}
+.icon-facebook,
+.icon-instagram {
+    height: 30px;
+    width: 30px;
+}
+
+.input-search {
+    position: absolute;
+    top: 13px;
+    height: 30px;
+    width: 200px;
+    right: 150px;
+    opacity: 0;
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    transform: translatex(60px);
+}
+
+.hidden:hover > .input-search {
+    opacity: 1;
+    transform: translatex(0px);
+    transition: opacity .5s, transform .5s;
+}
+
+.btn-search {
+    cursor: pointer;
+    position: absolute;
+    top: 13px;
+    right: 60px;
+    color: rgba(0,0,0,0);
+}
+
+.last-works {
+    position: relative;
+}
+
+.title {
+    margin-top:100px;
+    margin-left:90px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.more {
+    margin-top:100px;
+    margin-left:90px;
+    font-size: 18px;
+}
+
+.photo-baby{
+    position: absolute;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    left: 50%;
+}
+
+.under-photo {
+    position: relative;
+    margin-top: 20px;
+}
+
+.title-photo {
+    position: absolute;
+    font-size: 30px;
+    font-weight: normal;
+    margin-left: 40px;
+}
+
+.date {
+    position: absolute;
+    transform: rotate(270deg);
+    border-bottom: 1px #000000 solid;
+    margin-top: 25px;
+    left:-25px;
+}
+
+.hashtag {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.see-more{
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+    font-size: 15px;
+    text-decoration-line: underline;
+}
+
+.left-photo {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    left: 20%;
+    top: 250px;
+    color: rgba(0,0,0,0);
+}
+
+.right-photo {
+    position: absolute;
+    transform: translateX(50%);
+    width: 400px;
+    height: 400px;
+    right: 17%;
+    top: 250px;
+    color: rgba(0,0,0,0);
+}
+
+.prev-button{
+    position: absolute;
+    top: 660px;
+    left: 13%;
+}
+
+.next-button{
+    position: absolute;
+    top: 660px;
+    right: 13%;
+}
+
+.about{
+    position: relative;
+    top: 750px;
+    height: 650px;
+    background-color: #606060;
+    color: white;
+}
+
+.title-about {
+    position: absolute;
+    margin-top: 80px;
+}
+
+.image {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 15px;
+    height: 450px;
+    width: 450px;
+}
+
+.content {
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 150px;
+}
+
+.subtitle {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.share {
+    position: absolute;
+    left: 350px;
+    top: 15px;
+}
+
+.icon-instagram {
+    padding-left: 20px;
+}
+
+.description {
+    padding: 10px;
+    max-width: 600px;
+    font-size: 18px;
+}
+
+.latest-blog {
+    position: relative;
+    top: 770px;
+    height: 1400px;
+}
+
+.post {
+    margin-left: 30px;
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post-content {
+    width: 500px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    position: relative
+}
+
+.atacama,
+.harry {
+    height: 320px;
+}
+
+.text-right-blog{
+    margin-left: 40px;
+}
+
+.post-content .date {
+    position: absolute
+}
+
+.post-content .see-more {
+    position: absolute;
+    bottom:-40px;
+}
+
+.footer {
+    position: relative;
+    top: 550px;
+    height: 180px;
+    background-color: #606060;
+    color: white;
+}
+
+.header-footer {
+    display: flex;
+    max-width: 1300px;
+    height: 145px;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+}
+
+.logo-footer{
+    background: url(../images/logo.png) no-repeat;
+    background-size: cover;
+    height: 137px;
+    width: 280px;
+    text-indent: -9999px;
+}
+
+.menu-footer-left,
+.menu-footer-right,
+.social-media-footer{
+    list-style-type: none;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.social-media-footer .instagram,
+.social-media-footer .facebook {
+    margin-top: -10px;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-footer {
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 7px;
+}
