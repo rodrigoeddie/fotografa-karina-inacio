@@ -3,11 +3,11 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+    background-color: white;
     color: black;
 }
 
-div.interface {
-    background-color: white;
+.container {
     position: relative;
     max-width: 1280px;
     margin: 0 auto;
@@ -16,7 +16,7 @@ div.interface {
 
 .top {
     position: relative;
-    border-bottom: 1px #000000 solid;
+    border-bottom: 1px black solid;
 }
 
 .menu {
@@ -46,13 +46,38 @@ div.interface {
 .menu-right,
 .menu-left {
     justify-content: space-between;
+    max-width: 405px;
     display: flex;
-    width: 30%;
+    width: 35%;
 }
 
 .menu-right li a,
 .menu-left li a {
     line-height: 80px;
+    position: relative;
+    display: block;
+}
+
+.menu-right li a:before,
+.menu-left li a:before {
+    content: '';
+    transition: opacity .2s, right .2s, left .2s;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    opacity: 0;
+    left: 50%;
+    height: 4px;
+    background: black;
+    display: block;
+}
+
+
+.menu-right li a:hover:before,
+.menu-left li a:hover:before {
+    left: 0;
+    opacity: 1;
+    right: 0;
 }
 
 .bottom {
