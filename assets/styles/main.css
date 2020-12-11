@@ -14,6 +14,29 @@ body {
     width: 95%;
 }
 
+.wrap-logo {
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 338px;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+}
+
+.wrap-logo .logo {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -9999px;
+    margin-top: 30px;
+    display: block;
+    height: 137px;
+    width: 274px;
+}
+
 .top {
     position: relative;
     border-bottom: 1px black solid;
@@ -23,24 +46,6 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 22px;
-}
-
-.wrap-logo {
-    transform: translateX(-50%);
-    padding: 31px 33px 0 33px;
-    text-indent: -9999px;
-    background: white;
-    position: absolute;
-    left: 50%;
-
-}
-
-.wrap-logo .logo {
-    background: url(../images/logo.png) no-repeat;
-    background-size: cover;
-    display: block;
-    height: 137px;
-    width: 274px;
 }
 
 .menu-right,
